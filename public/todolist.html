@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Todo list project</title>
+   <!-- Link tailwind css -->
+   <link rel="stylesheet" href="/public/build/tailwind.css">
+   <!-- Unicons icon -->
+   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+
+<body>
+   <!-- Header section (add task input and todo list title) -->
+   <header>
+      <section class="w-11/12 xl:w-7/12 h-auto flex flex-col justify-between mx-auto">
+         <!-- Navbar container -->
+         <div class="w-full h-auto mt-4 flex justify-center items-end">
+            <div class="navbar bg-base-100">
+               <div class="navbar-start">
+                  <div class="dropdown">
+                     <label tabindex="0" class="btn btn-ghost btn-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                           stroke="currentColor">
+                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M4 6h16M4 12h16M4 18h7" />
+                        </svg>
+                     </label>
+                     <ul class="menu menu-compact dropdown-content bg-base-300 w-56 p-2 rounded-box">
+                        <li>
+                           <a class="font-bold" href="https://www.amirhosseinbanaei.ir">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                 stroke="currentColor">
+                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                              </svg>
+                              My website
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="navbar-center">
+                  <a class="btn btn-ghost normal-case text-xl">Todo list project</a>
+               </div>
+               <div class="navbar-end">
+                  <button class="btn btn-ghost btn-circle">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                           d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                     </svg>
+                  </button>
+                  <button class="btn btn-ghost btn-circle">
+                     <div class="indicator">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                           stroke="currentColor">
+                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                        </svg>
+                        <span class="badge badge-xs badge-primary indicator-item"></span>
+                     </div>
+                  </button>
+               </div>
+            </div>
+         </div>
+         <!-- Input search container -->
+         <div class="w-full h-14 border-2 border-gray/8 mt-4 rounded-2xl flex items-center">
+            <!-- Input space container -->
+            <span class="w-12 h-full rounded-l-2xl"></span>
+            <!-- Main Input -->
+            <input type="text" class="input font-bold focus:border-0 focus:outline-0 w-full addInputTodo" maxlength="32"
+               placeholder="Add your task...">
+            <!-- Input icon container -->
+            <span class="w-20 addNewTodoBtn h-full flex rounded-r-2xl items-center justify-center">
+               <i class="uil uil-plus-circle btn btn-ghost text-2xl hover:cursor-pointer"></i>
+            </span>
+         </div>
+      </section>
+   </header>
+   <main>
+      <!-- All todoes and sort section container -->
+      <section class="w-11/12 xl:w-7/12 h-auto mx-auto mt-6 flex flex-col">
+         <!-- sort section and title container -->
+         <div class="w-full h-16 grid grid-rows-1 grid-cols-2">
+            <!-- Title container -->
+            <div class="w-full h-full flex items-center pl-3">
+               <h1 class="font-semibold">Sort your tasks :</h1>
+            </div>
+            <!-- Sort container -->
+            <div class="w-full h-full flex items-center justify-end pr-3 relative">
+               <!-- Sort tasks div -->
+               <div
+                  class="w-auto p-4 h-10 bg-base-300 flex items-center justify-center rounded-xl gap-x-2 hover:cursor-pointer sortContainer">
+                  <p class="text-sm text-gray/8 font-semibold">All tasks</p>
+                  <i class="uil uil-sort-amount-down text-gray/8 text-xl"></i>
+               </div>
+               <!-- Sort option container -->
+               <div class="w-64 h-44 hidden bg-base-300 rounded-xl absolute p-4 
+               top-16 sortOption z-50">
+                  <div class="w-full h-full shadow">
+                     <span class="w-full h-12 flex justify-between items-center hover:cursor-pointer">
+                        <p class="text-gray/8 font-semibold">All tasks</p>
+                        <i class="uil uil-sort-amount-down text-gray/8 text-xl"></i>
+                     </span>
+                     <span class="w-full h-12 flex justify-between items-center hover:cursor-pointer">
+                        <p class="text-gray/8 font-semibold">Completed</p>
+                        <i class="uil uil-check-circle text-gray/8 text-xl"></i>
+                     </span>
+                     <span class="w-full h-12 flex justify-between items-center hover:cursor-pointer">
+                        <p class="text-gray/8 font-semibold">Uncompleted</p>
+                        <i class="uil uil-times-circle text-gray/8 text-xl"></i>
+                     </span>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- All todoes container -->
+         <div class="w-full h-auto mt-4 mb-10 flex flex-col gap-y-5 allTodoesContainer">
+            <!-- <input type="text" maxlength=""> -->
+         </div>
+      </section>
+   </main>
+   <script src="/src/js/app.js"></script>
+</body>
+
+</html>
