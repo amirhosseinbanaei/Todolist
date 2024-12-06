@@ -1,4 +1,4 @@
-# Shopping project
+# Simple Todolist project
 
 ### 🛠️ Built With
 
