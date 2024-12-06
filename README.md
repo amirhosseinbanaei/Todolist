@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Shopping project
 
 ### 🛠️ Built With
@@ -19,4 +18,3 @@ Simple Todo list project built with <strong>Javascript</strong> , <strong>[Tailw
 The target for doing this project was just work with <strong>Local Storage</strong> and saving data in it with Javascript.
 
 ### You can see this project [here](https://www.todolist.amirhosseinbanaei.ir)
->>>>>>> 23f243a0ea47b028c041b03ee5082b224d3f1a87
